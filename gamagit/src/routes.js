@@ -1,18 +1,16 @@
 import React from 'react';
 
-import { Route, Switch, BrowserRouter } from "react-router-dom";
-
-
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Repositories from './Repositories';
 import Home from './Home';
 
-export default function Routes() {
+export default function Rotas() {
     return (
         <BrowserRouter>
-            <Switch>
+            <Routes>
                 <Route path='/' exact component={Home} />
                 <Route path='/repositories' component={Repositories} />
-            </Switch>
+            </Routes>
         </BrowserRouter>
     );
 }

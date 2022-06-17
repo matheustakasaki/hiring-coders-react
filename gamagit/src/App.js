@@ -1,13 +1,12 @@
 
 import React from 'react';
-import Routes from './routes';
-import './App.css';
+import Rotas from './routes.js';
 
 function App(props) {
 
   return (
     <>
-    <Routes></Routes>
+      <Rotas />
     </>
   );
 }
