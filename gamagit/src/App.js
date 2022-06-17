@@ -11,6 +11,7 @@ function App(props) {
 
         <h1>{props.title}, {usuario}!</h1>
         <input name='usuario' id='usuario' className='usuarioInput' placeholder='Usuário' />
+        <button type='button'>Pesquisar</button>
       </header>
     </div>
   );
