@@ -10,7 +10,7 @@ function Home(props) {
 
     axios.get(`https://api.github.com/users/${usuario}/repos`).then(res => console.log(res.data))
   }
-  
+
   return (
     <div className="App">
       <header className="App-header">
