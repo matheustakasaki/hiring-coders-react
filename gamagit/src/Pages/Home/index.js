@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../../App.css'
 import axios from 'axios'
 
@@ -12,14 +12,16 @@ function Home(props) {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
+      <div className="App">
+        <header className="App-header">
 
-        <h1>{props.title}, {usuario}!</h1>
-        <input className='usuarioInput' placeholder='Usuário' value={usuario} onChange={e => setUsuario(e.target.value)} />
-        <button type='button' onClick={handlePesquisa}>Pesquisar</button>
-      </header>
-    </div>
+          <h1>{props.title}, {usuario}!</h1>
+          <input className='usuarioInput' placeholder='Usuário' value={usuario} onChange={e => setUsuario(e.target.value)} />
+          <button type='button' onClick={handlePesquisa}>Pesquisar</button>
+        </header>
+      </div>
+    </>
   );
 }
 
