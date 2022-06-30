@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Title, Container, List, ListItem } from './styled';
-
+import { Title, Container, List, ListItem, LinkHome } from './styled';
 
 export default function Repositories() {
 
@@ -26,6 +25,8 @@ export default function Repositories() {
                 })}
 
             </List>
+
+            <LinkHome to='/'></LinkHome>
 
         </Container>
 
