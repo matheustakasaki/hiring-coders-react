@@ -3,10 +3,14 @@ import React, { useState } from 'react';
 import '../../App.css'
 import axios from 'axios'
 import { Input, Button, Container } from './styled';
+import { useHistory } from 'react-router-dom'
+
 
 function Home(props) {
 
-  const [usuario, setUsuario] = useState('')
+  const history = useHistory();
+  const [usuario, setUsuario] = useState('');
+
   function handlePesquisa() {
 
     axios.get(`https://api.github.com/users/${usuario}/repos`).then(res => {
@@ -18,7 +22,8 @@ function Home(props) {
         repositoriesName.push(item.name);
       });
       localStorage.setItem('repositoriesName:', JSON.stringify(repositoriesName))
-      JSON.stringify(repositories);
+
+      history.push('/repositories')
 
     })
   }
